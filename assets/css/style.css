@@ -1,0 +1,27 @@
+body {
+	background-color: #eee;
+	font-family: Poppins, sans-serif;
+}
+table {
+	background: white;
+	border-radius: 8px;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	margin-top: 100px;
+}
+label {
+	padding: 3px;
+}
+input {
+	background-color: #eee;
+	border: thin solid #ddd;
+	border-radius: 2px;
+	outline: none;
+	width: 250px;
+	height: 30px;
+	padding: 5px;
+}
+input.submit {
+	background-color: #d92cf9;
+	width: 260px;
+	height: 30px;
+}

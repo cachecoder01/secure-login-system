@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<title>Login</title>
+	<link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+</head>
+<body>
+	<form method="POST" action="reg.php" enctype="multipart/form-data">
+	<table align="center">
+		<tr>
+			<td style="padding: 20px 20px 0 20px;">
+				<label>Brand Name</label><br>
+				<input type="text" name="b_name" placeholder="Enter Brand Name" required>
+			</td>
+		</tr>
+		<tr>
+			<td style="padding: 20px 20px 0 20px;">
+				<label>Brand Logo</label><br>
+				<input type="file" name="img" accept="image/*" placeholder="Enter Brand Image/Logo">
+			</td>
+		</tr>
+		<tr>
+			<td style="padding: 20px 20px 0 20px;">
+				<label>Name</label><br>
+				<input type="text" name="name" placeholder="Enter Name" required>
+			</td>
+		</tr>
+		<tr>
+			<td style="padding: 20px 20px 0 20px;">
+				<label>Email</label><br>
+				<input type="email" name="email" placeholder="Enter Email" required>
+			</td>
+		</tr>
+		<tr>
+			<td style="padding: 20px;">
+				<label>Password</label><br>
+				<input type="password" name="pass" placeholder="Enter Password" required>
+			</td>
+		</tr>
+		<tr>
+			<td style="padding: 20px;">
+				<label>Confirm Password</label><br>
+				<input type="password" name="cpass" placeholder="Confirm Password" required>
+			</td>
+		</tr>
+		<tr>
+			<td style="padding: 20px; padding-top: 0px;">
+				<input class="submit" type="submit" value="Login">
+			</td>
+		</tr>
+		<tr>
+			<td style="padding: 0 20px 20px 20px;">Already have an account? <a href="login.html">Signin</a></td>
+		</tr>
+	</table>
+	</form>
+</body>
+</html>
