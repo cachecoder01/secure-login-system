@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 	$b_name=htmlspecialchars(strip_tags($b_name), ENT_QUOTES, 'UTF-8');
 
 	$name=trim($_POST['name']);
-	$name=htmlspecialchars(strip_tags($b_name), ENT_QUOTES, 'UTF-8');
+	$name=htmlspecialchars(strip_tags($name), ENT_QUOTES, 'UTF-8');
 
 	$email=trim($_POST['email']);
 	$email=filter_var($email, FILTER_VALIDATE_EMAIL);
@@ -98,6 +98,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 			</table>";
 	}else {
 
+	$pass = password_hash($pass, PASSWORD_DEFAULT);
+	
 		$stmt=$conn->prepare("INSERT INTO reginfo(brand_name, brand_img, name, email, password)VALUE(?, ?, ?, ?, ?)");
 		$stmt->bind_param("sssss", $b_name, $img, $name, $email, $pass);
 		$result=$stmt->execute();

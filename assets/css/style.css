@@ -1,6 +1,8 @@
 body {
 	background-color: #eee;
 	font-family: Poppins, sans-serif;
+	padding: 0;
+	margin: 0;
 }
 table {
 	background: white;
@@ -24,4 +26,33 @@ input.submit {
 	background-color: #d92cf9;
 	width: 260px;
 	height: 30px;
+}
+#header {
+	margin: 0;
+	top: 0;
+	position: fixed;
+	width: 100%;
+	padding: 15px;
+	background-color: #15161D;
+	color: white;
+}
+.brand_logo {
+	padding: 5px;
+	float: left;
+}
+.brand_name {
+	float: left;
+}
+.profile {
+	float: right;
+	margin-right: 40px;
+	display: flex;
+	flex: wrap;
+	padding: 3px;
+	margin-top: 20px;
+}
+@media only screen and (max-width: 768px){
+	.profile {
+		margin-top: 3px;
+	}
 }
