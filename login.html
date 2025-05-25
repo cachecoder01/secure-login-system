@@ -6,29 +6,39 @@
 	<meta name="description" content="">
 	<title>Login</title>
 	<link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+	<style type="text/css">
+		body {
+			background-color: #eee;
+		}
+	</style>
 </head>
 <body>
-	<form method="POST" action="login.php">
-	<table align="center">
-		<tr>
-			<td style="padding: 20px 20px 0 20px;">
-				<label>Email</label><br>
-				<input type="email" name="email" placeholder="Enter Email" required>
-			</td>
-		</tr>
-		<tr>
-			<td style="padding: 20px 20px 0 20px;">
-				<label>Password</label><br>
-				<input type="password" name="pass" placeholder="Enter Password" required>
-			</td>
-		</tr>
-		<tr>
-			<td style="padding: 20px;"><input class="submit" type="submit" value="Login"></td>
-		</tr>
-		<tr>
-			<td style="padding: 0 20px 20px 20px;">Don't have an account? <a href="reg.html">Register</a></td>
-		</tr>
-	</table>
-	</form>
+	<section class="form">
+		<form method="POST" action="login.php">
+			<table align="center">
+				<tr>
+					<td>
+						<label>Email</label><br>
+						<input type="email" name="email" placeholder="Enter Email" required>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label>Password</label><br>
+						<input style="" type="password" name="pass" placeholder="Enter Password" required>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<button style="background-color: purple; width: 250px;">Submit</button>
+					</td>
+
+				</tr>
+				<tr>
+					<td style="padding: 10px 20px; width: 250px;">Don't have an account? <a href="reg.html">Register</a></td>
+				</tr>
+			</table>
+		</form>
+	</section>
 </body>
 </html>

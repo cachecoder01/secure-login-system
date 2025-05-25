@@ -4,57 +4,68 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="">
+
 	<title>Login</title>
+
 	<link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+  	<link rel="shortcut icon" type="image/icon" href="./assets/images/logo/brand-logo.png">
+
+  	<style type="text/css">
+  		body {
+			background-color: #eee;
+		}
+  	</style>
 </head>
 <body>
+	<section class="form">
 	<form method="POST" action="reg.php" enctype="multipart/form-data">
 	<table align="center">
 		<tr>
-			<td style="padding: 20px 20px 0 20px;">
+			<td>
 				<label>Brand Name</label><br>
 				<input type="text" name="b_name" placeholder="Enter Brand Name" required>
 			</td>
 		</tr>
 		<tr>
-			<td style="padding: 20px 20px 0 20px;">
+			<td>
 				<label>Brand Logo</label><br>
 				<input type="file" name="img" accept="image/*" placeholder="Enter Brand Image/Logo">
 			</td>
 		</tr>
 		<tr>
-			<td style="padding: 20px 20px 0 20px;">
+			<td>
 				<label>Name</label><br>
 				<input type="text" name="name" placeholder="Enter Name" required>
 			</td>
 		</tr>
 		<tr>
-			<td style="padding: 20px 20px 0 20px;">
+			<td>
 				<label>Email</label><br>
 				<input type="email" name="email" placeholder="Enter Email" required>
 			</td>
 		</tr>
 		<tr>
-			<td style="padding: 20px;">
+			<td>
 				<label>Password</label><br>
 				<input type="password" name="pass" placeholder="Enter Password" required>
 			</td>
 		</tr>
 		<tr>
-			<td style="padding: 20px;">
+			<td>
 				<label>Confirm Password</label><br>
 				<input type="password" name="cpass" placeholder="Confirm Password" required>
 			</td>
 		</tr>
 		<tr>
-			<td style="padding: 20px; padding-top: 0px;">
-				<input class="submit" type="submit" value="Login">
+			<td>
+				<button type="submit" style="background-color: purple; width: 250px;">Submit</button>
 			</td>
 		</tr>
 		<tr>
-			<td style="padding: 0 20px 20px 20px;">Already have an account? <a href="login.html">Login</a></td>
+			<td style="padding: 10px 20px;">Already have an account? <a href="login.html">Login</a></td>
 		</tr>
 	</table>
 	</form>
+	</main>
 </body>
 </html>

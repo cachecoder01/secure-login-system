@@ -40,50 +40,8 @@ if (!isset($_SESSION['user_logged_in']) || $_SESSION['user_logged_in'] !== true)
 			padding: 0;
 			margin: 0;
 		}
-		#header {
-			margin: 0;
-			top: 0;
-			position: fixed;
-			width: 100%;
-			padding: 15px;
-  			background-color: #15161D;
-  			
-  			color: white;
-		}
-		.brand_logo {
-			padding: 5px;
-			float: left;
-		}
-		.brand_name {
-			float: left;
-		}
-		.profile {
-			float: right;
-			margin-right: 40px;
-			display: flex;
-			flex: wrap;
-			padding: 3px;
-			margin-top: 20px;
-		}
-		@media only screen and (max-width: 768px){
-			.profile {
-				margin-top: 3px;
-			}
-		}
 
-		.dropdown {overflow: hidden; margin: 0;}
-    	.dropbtn, .dropbtn:focus {padding: 3px; padding-left: 5px; margin-right: 40px; background-color: inherit; color: white; border: none; padding-top: 5px}
-    	.dropdown-content {display: none; margin-top: 15px; position: absolute; background-color: red; box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.05); z-index: 9000000; border-radius: 2px; height: 30px; padding: 5px;}
-    	.dropdown-content a {color: white; padding: 5px; text-decoration: none; display: block; z-index: 9000000;}
-    	.show {display: block; z-index: 2000;}
-
-    	#sub_header {
-    		margin: 0;
-    		width: 100%;
-    		height: 5px;
-    		background-color: red;
-    		position: sticky;
-    	}
+		
 	</style>
 </head>
 <body>
@@ -94,11 +52,11 @@ if (!isset($_SESSION['user_logged_in']) || $_SESSION['user_logged_in'] !== true)
 				<img src="./assets/images/brand_logo/<?= $b_img ?>" width="50">
 			</div>
 			<div class="brand_name">
-				<h1 class="brand"><?= $b_name ?><div style="display: inline; color: red;">.</div></h1>
+				<h1 class="brand"><?= $b_name ?><div style="display: inline; color: purple;">.</div></h1>
 			</div>
 
 			<div class="profile">
-				<div style="padding: 3px; padding-right: 5px; border-right: thin solid red;">
+				<div style="padding: 3px; padding-right: 5px; border-right: thin solid purple;">
 					<i class="fas fa-user"></i>
 				</div>
 				<div style="padding: 5px;">
@@ -109,21 +67,31 @@ if (!isset($_SESSION['user_logged_in']) || $_SESSION['user_logged_in'] !== true)
                   		<span>
                   			<div id="myDropdown" class="dropdown-content">
                     			<div>
-                      				<a>LogOut <i class="fa fa-sign-out"></i></a>
+                      				<a href="logout.php">LogOut <i class="fa fa-sign-out"></i></a>
                       			</div>
                       		</div>
                   		</span>
 				</div>
-				<div style="border: thin solid red; padding: 5px;">
-					Contact us
+				<div style="border: thin solid purple; padding: 5px;">
+					<a href="contact_form">Contact us</a>
 				</div>
 			</div>
 		
 	</div>
 	<div id="sub_header">
-
 	</div>
 
+	<table align="center" style="margin-top: 200px; text-align: center; box-shadow: none; background: none;">
+		<tr>
+			<td style="padding: 20px;">
+				<img src="./assets/images/brand_logo/<?= $b_img ?>" width="200">
+			</td>
+		</tr>
+		<tr>
+			<td>Name: <em><?= $name ?></em><br>
+				Email: <em><?= $em ?></em></td>
+		</tr>
+	</table>
 	<script>
     	function myfunction() {
     	  document.getElementById("myDropdown").classList.toggle("show");
