@@ -32,7 +32,14 @@ if (!isset($_SESSION['user_logged_in']) || $_SESSION['user_logged_in'] !== true)
 
 	<title>Your Dashboard</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-	<link rel="shortcut icon" type="Image/icon" href="./assets/images/brand_logo/<?= $b_img ?>">
+	<?php
+	if (!empty($b_img)) {
+		echo '<link rel="shortcut icon" type="Image/icon" href="./assets/images/brand_logo/' .$b_img. '">';
+	}else {
+		echo '<link rel="shortcut icon" type="Image/icon" href="./assets/images/logo/brand-logo.png">';
+	}
+	?>
+	
 	<link rel="stylesheet" type="text/css" href="./assets/css/style.css">
 
 	<style type="text/css">
@@ -40,21 +47,37 @@ if (!isset($_SESSION['user_logged_in']) || $_SESSION['user_logged_in'] !== true)
 			padding: 0;
 			margin: 0;
 		}
-
-		
+		a {color: white;}
+		a:visited {
+			color: white;
+		}
+		footer {
+      bottom: 5px;
+      position: fixed;
+      justify-content: center;
+      text-align: center;
+      margin: 5px;
+    }
+    
 	</style>
 </head>
 <body>
 
 	<div id="header">
-		
-			<div class="brand_logo">
-				<img src="./assets/images/brand_logo/<?= $b_img ?>" width="50">
+		<?php
+		if (!empty($b_img)) {
+		echo '<div class="brand_logo">
+				<img src="./assets/images/brand_logo/' .$b_img. '" width="50">
 			</div>
 			<div class="brand_name">
-				<h1 class="brand"><?= $b_name ?><div style="display: inline; color: purple;">.</div></h1>
-			</div>
-
+				<h1 class="brand">' .$b_name. '<div style="display: inline; color: purple;">.</div></h1>
+			</div>';
+		}else {
+		echo '<div class="brand_name">
+				<h1 class="brand">' .$b_name. '<div style="display: inline; color: purple;">.</div></h1>
+			</div>';
+		}
+		?>
 			<div class="profile">
 				<div style="padding: 3px; padding-right: 5px; border-right: thin solid purple;">
 					<i class="fas fa-user"></i>
@@ -67,13 +90,16 @@ if (!isset($_SESSION['user_logged_in']) || $_SESSION['user_logged_in'] !== true)
                   		<span>
                   			<div id="myDropdown" class="dropdown-content">
                     			<div>
-                      				<a href="logout.php">LogOut <i class="fa fa-sign-out"></i></a>
+                      				<a onclick="return confirm('Are you sure you want to LogOut?')" href="logout.php">LogOut <i class="fa fa-sign-out"></i></a>
+                      			</div>
+                      			<div>
+                      				ch
                       			</div>
                       		</div>
                   		</span>
 				</div>
-				<div style="border: thin solid purple; padding: 5px;">
-					<a href="contact_form">Contact us</a>
+				<div style="border: thin solid purple; padding: 5px; color: white;">
+					<a href="https://cachecoder.site" target="_blank">Contact us</a>
 				</div>
 			</div>
 		
@@ -84,7 +110,13 @@ if (!isset($_SESSION['user_logged_in']) || $_SESSION['user_logged_in'] !== true)
 	<table align="center" style="margin-top: 200px; text-align: center; box-shadow: none; background: none;">
 		<tr>
 			<td style="padding: 20px;">
-				<img src="./assets/images/brand_logo/<?= $b_img ?>" width="200">
+				<?php
+				if (!empty($b_img)) {
+				echo '<img src="./assets/images/brand_logo/' .$b_img. '" width="200">';
+				}else {
+					echo '<img src="./assets/images/logo/me.jpg" width="200">';
+				}
+				?>
 			</td>
 		</tr>
 		<tr>
@@ -92,6 +124,16 @@ if (!isset($_SESSION['user_logged_in']) || $_SESSION['user_logged_in'] !== true)
 				Email: <em><?= $em ?></em></td>
 		</tr>
 	</table>
+
+	<section>
+      <footer align="center">
+          <p style="font-size: small; color: #888ea5;">
+            &copy; All Rights Reserved. Design and Developed by
+            <a href="https://cachecoder.site" target="_blank" style="color: #444;">CacheCoder</a>
+          </p>
+      </footer>
+    </section>
+
 	<script>
     	function myfunction() {
     	  document.getElementById("myDropdown").classList.toggle("show");

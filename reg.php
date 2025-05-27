@@ -7,6 +7,9 @@
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="./assets/css/style.css">
 	<style type="text/css">
+		body {
+			background-color: #eee;
+		}
 		table {
 			margin-top: 200px;
 		}
