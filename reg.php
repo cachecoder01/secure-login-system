@@ -30,6 +30,12 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 	$email=trim($_POST['email']);
 	$email=filter_var($email, FILTER_VALIDATE_EMAIL);
 
+	$sec_q=trim($_POST['question']);
+	$sec_q=htmlspecialchars(strip_tags($sec_q), ENT_QUOTES, 'UTF-8');
+
+	$sec_a=trim($_POST['answer']);
+	$sec_a=htmlspecialchars(strip_tags($sec_a), ENT_QUOTES, 'UTF-8');
+
 	$pass=trim($_POST['pass']);
 	$pass=htmlspecialchars(strip_tags($pass), ENT_QUOTES, 'UTF-8');
 
@@ -102,9 +108,10 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 	}else {
 
 	$pass = password_hash($pass, PASSWORD_DEFAULT);
+	$sec_a= password_hash($sec_a, PASSWORD_DEFAULT);
 	
-		$stmt=$conn->prepare("INSERT INTO reginfo(brand_name, brand_img, name, email, password)VALUE(?, ?, ?, ?, ?)");
-		$stmt->bind_param("sssss", $b_name, $img, $name, $email, $pass);
+		$stmt=$conn->prepare("INSERT INTO reginfo(brand_name, brand_img, name, email, password, sec_question, sec_answer)VALUE(?, ?, ?, ?, ?, ?, ?)");
+		$stmt->bind_param("sssssss", $b_name, $img, $name, $email, $pass, $sec_q, $sec_a);
 		$result=$stmt->execute();
 	}
 	if ($result) {

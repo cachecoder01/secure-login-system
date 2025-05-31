@@ -5,6 +5,9 @@
 	<meta name="viewport" content="width=device-width, initail-scale=1.0">
 	<link rel="stylesheet" href="./assets/css/style.css">
 	<style type="text/css">
+		body {
+			background-color: #eee;
+		}
 		table {
 			margin-top: 200px;
 		}
@@ -51,14 +54,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		}
 
 	}else {
-		echo '<table align="center">
-						<tr>
-							<td style="padding: 20px;">Account does not exits</td>
-						</tr>
-						<tr>
-							<td style="padding: 20px; padding-top: 0; text-align: right;"><a href="reg.html">Register</a></td>
-						</tr>
-					</table>';
+	  	echo '
+	  	<table align="center">
+			<tr>
+				<td style="padding: 20px;">Account does not exits</td>
+			</tr>
+			<tr>
+				<td style="padding: 20px; padding-top: 0; display: flex; flex: wrap;">
+					<div style="text-align: left; margin-right: 18px;"><a href="login.html">Try again</a></div>
+					<div style="text-align: right; margin-left: 18px;"><a href="reg.html">Register</a></div>
+				</td>
+			</tr>
+		</table>';
 	}
 
 }else {

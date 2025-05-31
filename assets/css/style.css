@@ -5,7 +5,6 @@ body {
         box-sizing: border-box;
         font-family: 'Inter', sans-serif;
     }
-    overflow: hidden;
     a {
         text-decoration: none;
     }
@@ -36,7 +35,7 @@ td {
 label {
 	padding: 3px;
 }
-input,textarea {
+input {
 	background-color: #eee;
 	border: thin solid #ddd;
 	border-radius: 2px;
@@ -44,7 +43,7 @@ input,textarea {
 	width: 250px;
 	padding: 8px;
 }
-input,textarea:focus {
+input:focus {
 	border: thin solid purple;
 	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }

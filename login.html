@@ -20,6 +20,18 @@
       justify-content: center;
       text-align: center;
     }
+    input {
+	background-color: #eee;
+	border: thin solid #ddd;
+	border-radius: 2px;
+	outline: none;
+	width: 250px;
+	padding: 8px;
+}
+input:focus {
+	border: thin solid purple;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
 	</style>
 	
 </head>
@@ -40,10 +52,14 @@
 					</td>
 				</tr>
 				<tr>
-					<td>
+					<td style="padding: 0px 20px;">
+						<p><a href="pass_reset.html">Forgot Password?</a></p>
+					</td>
+				</tr>
+				<tr>
+					<td style="padding-top: 0;">
 						<button style="background-color: purple; width: 250px;">Submit</button>
 					</td>
-
 				</tr>
 				<tr>
 					<td style="padding: 10px 20px; width: 250px;">Don't have an account? <a href="reg.html">Register</a></td>

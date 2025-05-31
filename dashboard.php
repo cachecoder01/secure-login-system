@@ -58,7 +58,38 @@ if (!isset($_SESSION['user_logged_in']) || $_SESSION['user_logged_in'] !== true)
       text-align: center;
       margin: 5px;
     }
-    
+    .dropdown {
+	overflow: hidden;
+	margin: 0;
+}
+.dropbtn, .dropbtn:focus { 
+	padding: 3px;
+	padding-left: 5px;
+	margin-right: 40px;
+	background-color: inherit;
+	color: white;
+	border: none;
+}
+.dropdown-content {
+	display: none;
+	margin-top: 15px;
+	position: absolute;
+	background-color: purple;
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.05);
+	z-index: 9000000;
+	border-radius: 2px;
+	height: 70px;
+	padding: 5px;}
+.dropdown-content a {
+	color: white;
+	padding: 5px;
+	text-decoration: none;
+	display: block;
+	z-index: 9000000;}
+.show {
+	display: block;
+	z-index: 2;
+}
 	</style>
 </head>
 <body>
@@ -91,9 +122,7 @@ if (!isset($_SESSION['user_logged_in']) || $_SESSION['user_logged_in'] !== true)
                   			<div id="myDropdown" class="dropdown-content">
                     			<div>
                       				<a onclick="return confirm('Are you sure you want to LogOut?')" href="logout.php">LogOut <i class="fa fa-sign-out"></i></a>
-                      			</div>
-                      			<div>
-                      				ch
+                      				<a href="pass_reset.html">Change Password <i class="fa fa-lock"></i></a>
                       			</div>
                       		</div>
                   		</span>

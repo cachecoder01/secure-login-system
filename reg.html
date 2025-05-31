@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="">
 
-	<title>Login</title>
+	<title>Registration</title>
 
 	<link rel="stylesheet" type="text/css" href="./assets/css/style.css">
   	<link rel="shortcut icon" type="image/icon" href="./assets/images/logo/brand-logo.png">
@@ -13,7 +13,33 @@
   	<style type="text/css">
   		body {
 			background-color: #eee;
-		}
+			overflow: scroll;
+			}
+		input {
+	background-color: #eee;
+	border: thin solid #ddd;
+	border-radius: 2px;
+	outline: none;
+	width: 250px;
+	padding: 8px;
+	box-shadow: none;
+}
+input:focus {
+	border: thin solid purple;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+select {
+		background-color: #eee;
+	border: thin solid #ddd;
+	border-radius: 2px;
+	outline: none;
+	width: 250px;
+	padding: 8px;
+}
+select:focus {
+	border: thin solid purple;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
   	</style>
 </head>
 <body>
@@ -44,6 +70,7 @@
 				<input type="email" name="email" placeholder="Enter Email" required>
 			</td>
 		</tr>
+
 		<tr>
 			<td>
 				<label>Password</label><br>
@@ -54,6 +81,24 @@
 			<td>
 				<label>Confirm Password</label><br>
 				<input type="password" name="cpass" placeholder="Confirm Password" required>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<label>Security Question</label><br>
+				<select input type="text" name="question">
+					<option>--- Select ---</option>
+					<option>What is the name of your first pet?</option>
+					<option>What is the city where you were born?</option>
+					<option>What is the name of the place where you feel most relaxed?</otion>
+					<option>What is the one thing you cannot live without?</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<label>Security Answer</label><br>
+				<input type="text" name="answer" placeholder="Enter Security Answer" required>
 			</td>
 		</tr>
 		<tr>
